@@ -3,99 +3,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/styles.css">
     <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div>
-            <a href="#">Isaac Fenwick</a>
-            <a href="tel:123.456.7890">(123) 456-7890</a>
+    <header class="text-center">
+        <div class="header-bar">
+            <div class="logo-wrap">
+                <a class="logo" href="#">Isaac Fenwick</a>
+            </div>
+            <div onclick="hideShowNav()" class="burger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>About</li>
-                <li>Photos</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+        <nav id="nav" class="nav-bar">
+                <a href="#home-section" onclick="hideShowNav()">HOME</a>
+                <a href="#services-section" onclick="hideShowNav()">SERVICES</a>
+                <a href="#about-section" onclick="hideShowNav()">ABOUT</a>
+                <a href="#photos-section" onclick="hideShowNav()">PHOTOS</a>
+                <a href="#contact-section" onclick="hideShowNav()">CONTACT</a>
+            </nav>
+        <a class="nav-anchor" name="home-section"></a>
+        <section class="home-section">
+            <div class="container">
+                <h1> Fenwick’s Services</h1>
+                <p> Striving to make a beautiful community one house at a time!</p>
+            </div>
+        </section>
     </header>
 
     <main>
-        <section class="home-section">
-            <h1>Pooper Scoopers</h1>
-            <p>pooper scoopers will handle the small projects you need done!</p>
+        <a class="nav-anchor" name="services-section"></a>
+        <section class="services-section text-center">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="services-content-container">
+                    <img src="http://via.placeholder.com/300x250" alt="Lawn Care picture">
+                    <h3>Lawn Care</h3>
+                    <div class="lawn-care-popup">
+                    <img src="http://via.placeholder.com/300x250" alt="Lawn Care picture">
+                        <ul>
+                            <li>Filler $10-$20</li>
+                            <li>Filler $30-$40</li>
+                            <li>Filler $50-$60</li>
+                            
+                        </ul>
+                    </div>
+                    <button class="services-button">Learn more</button>
+                </div>
+                <div class="services-content-container">
+                    <img src="http://via.placeholder.com/300x250" alt="Small projects">
+                    <h3>Small Projects</h3>
+                    <div class="lawn-care-popup">
+                            <img src="http://via.placeholder.com/300x250" alt="Lawn Care picture">
+                                <ul>
+                                    <li>Filler $10-$20</li>
+                                    <li>Filler $30-$40</li>
+                                    <li>Filler $50-$60</li>
+                                    
+                                </ul>
+                            </div>
+                    <button class="services-button">Learn more</button>
+                </div>
+                <div class="services-content-container">
+                    <img src="http://via.placeholder.com/300x250" alt="Cleaning inside of house">
+                    <h3>House Cleaning</h3>
+                    <div class="lawn-care-popup">
+                            <img src="http://via.placeholder.com/300x250" alt="Lawn Care picture">
+                                <ul>
+                                    <li>Filler $10-$20</li>
+                                    <li>Filler $30-$40</li>
+                                    <li>Filler $50-$60</li>
+                                    
+                                </ul>
+                            </div>
+                    <button class="services-button">Learn more</button>
+                </div>
+            </div>
         </section>
-
-        <section class="services-section">
-            <h2>Services</h2>
-            <h3>Lawn Care</h3>
-            <ul>
-                <li>filler</li>
-                <li>filler</li>
-                <li>filler</li>
-            </ul>
-            <h3>Small Projects</h3>
-            <ul>
-                <li>filler</li>
-                <li>filler</li>
-                <li>filler</li>
-            </ul>
-            <h3>House Cleaning</h3>
-            <ul>
-                <li>filler</li>
-                <li>filler</li>
-                <li>filler</li>
-            </ul>
-        </section>
-
+        <a class="nav-anchor" name="about-section"></a>
         <section class="about-section">
-            <h2>About</h2>
-            <h3>How I got here...</h3>
-            <p>Lorem ipsum dolor sit amet, an nam consequuntur interpretaris, ne quodsi corrumpit cum, his ex erant mandamus. Mei mucius explicari mnesarchum ei, duo cu repudiare dissentiunt comprehensam, paulo ludus zril ne mei. Mei ad probatus delicata, nec odio malorum ne. At sea corpora corrumpit rationibus, choro graeco nonumes quo in.
-            </p>
-            <img src="http://via.placeholder.com/300" alt="Man in a suit">
+            <div class="container">
+                <h2 class="text-center">About</h2>
+                <img src="images/business_picture_isaac.jpg" alt="Man in a suit">
+                <h3>How I got here...</h3>
+                <p>My name is Isaac Fenwick and I am a Freshman at Bluffton University. 
+                    In May of 2018, I decided to start Fenwick’s Yard Services & More for 
+                    two reasons. Number one, I love to help and interact with new people, 
+                    especially those in my community. Number two, I am going to college for 
+                    Business Administration and Accounting so I figured learning the ins and 
+                    outs of my own business would benefit me dramatically, and the money I make 
+                    in the process will help pay my college expenses. If there are any jobs from
+                    cleaning gutters to helping put up Christmas lights, do not be afraid to get 
+                    into contact with me. I look forward to working with you!
+                </p>
+            </div>
         </section>
 
-        <section class="photos-section">
+        <a class="nav-anchor" name="photos-section"></a>
+        <section class="photos-section text-center">
+            <div class="container">
             <h2>Photos</h2>
-                <img src="http://via.placeholder.com/300" alt="Man in a suit">
-                <img src="http://via.placeholder.com/300" alt="Man in a suit">
-                <img src="http://via.placeholder.com/300" alt="Man in a suit">
-                <button>View More</button>
+                <div class="photos-container">
+                <img src="http://via.placeholder.com/280" alt="Man in a suit">
+                </div>
+            </div>
         </section>
 
+        <a class="nav-anchor" name="contact-section"></a>
         <section class="contact-section">
-            <h2>Contact Us</h2>
-            <label for="fullName">
-                Name:
-                <input type="text" name="name">
-            </label>
-            <label for="email">
-                Email:
-                <input type="email" name="email">
-            </label>
-            <label for="number">
-                    Phone:
-                    <input type="phone" name="phone">
-                </label>
-            <label for="subject">
-                Subject:
-                <select name="" id="">
-                    <option value="?"></option>
-                    <option value="lawn-care">Lawn Care</option>
-                    <option value="small-projects">Small Projects</option>
-                    <option value="house-cleaning">House Cleaning</option>
-                    <option value="leaving-comment">Leaving a Comment</option>
-                </select>
-            </label>
-            <label for="users-message">
-                Your Message:
-                <textarea name="users-message" id="" cols="30" rows="10"></textarea>
-            </label>
+            <div class="container">
+                <h2 class="text-center">Contact Us</h2>
+                <form action="index.html" method="post">
+                    <div class="contact-info-container">
+                        <label for="fullName">Name:</label>
+                            <input type="text" name="name">
+                    </div>
+                    <div class="contact-info-container">
+                        <label for="email">Email:</label>
+                            <input type="email" name="email">
+                    </div>
+                    <div class="contact-info-container">
+                        <label for="number">Phone:</label>
+                                <input type="phone" name="phone">
+                    </div>
+                    <div class="contact-info-container">
+                    <label for="subject">Subject:</label>
+                        <select name="" id="">
+                            <option value="?"></option>
+                            <option value="lawn-care">Lawn Care</option>
+                            <option value="small-projects">Small Projects</option>
+                            <option value="house-cleaning">House Cleaning</option>
+                            <option value="leaving-comment">Leaving a Comment</option>
+                        </select>
+                    </div>
+                    <div class="contact-info-container">
+                        <label for="users-message">Your Message:</label>
+                            <textarea name="users-message" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div>
         </section>
     </main>
     
@@ -104,7 +155,6 @@
             <li>Copyright © 2019</li>
             <li>
                 <p>Castalia, OH 44824</p>
-                <span>(123) 456-7890</span>
             </li>
         </ul>
     </footer>

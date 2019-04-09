@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 69px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.8em;
+    padding: .5em 0;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 18px;
+}
+
+.nav-anchor::before {
+    content: "";
+    display: block;
+    height: 69px; /* fixed header height*/
+    margin: -69px 0 0; /* negative fixed header height */
+  }
+
+/* //////////////Header////////////// */
+
+.header-bar {
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo-wrap {
+    background: #668d3f;
+    width: 100%;
+    padding: 1em;
+    border-bottom: 2px solid black;
+}
+
+.logo {
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+.burger {
+    position: absolute;
+    top: 11px;
+    right: 20px;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.burger i{
+    display: block;
+    background: #111;
+    height: 2px;
+    width: 35px;
+    margin: 10px;
+}
+
+.nav-bar {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 9%;
+}
+
+.nav-bar a {
+    padding: 1em;
+    border-bottom: 1px solid #4d6a2f;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+.nav-bar a:hover {
+    background: #4d6a2f;
+}
+
+/* //////////////Home_Section////////////// */
+
+.home-section {
+    background-image: url(../images/header_background.jpg);
+    padding: 5em 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+    font-size: 3em;
+    padding-bottom: .5em;
+    color: white;
+    text-shadow: 2px 2px 1px #111;
+}
+
+.home-section p, h3 {
+    font-size: 2em;
+}
+
+.home-section p {
+    color: white;
+    text-shadow: 2px 2px 1px #111;
+}
+
+/* //////////////Services////////////// */
+
+.services-content-container {
+    margin-bottom: 2em;
+}
+
+.services-content-container h3 {
+    margin: .5em auto;
+}
+
+.services-button {
+    color: white;
+    font-size: 1em;
+    padding: 1em 2em;
+    border-radius: 5px;
+    background: #7BA94C;
+}
+
+.services-button:hover {
+    background: #597b37;
+    cursor: pointer;
+}
+
+/* //////////////About////////////// */
+
+.about-section {
+    background: lightgoldenrodyellow;
+    padding-bottom: 2.5em;
+}
+
+.about-section img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* //////////////Photos////////////// */
+
+.photos-section {
+    background: lightgreen;
+}
+
+.photos-container {
+    padding-bottom: 2.5em;
+}
+
+/* //////////////Contact////////////// */
+
+.contact-section {
+    margin: 0 auto;
+}
+
+.contact-info-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    padding: 1em 0;
+}
+
+textarea {
+    width: 100%;
+}
