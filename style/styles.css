@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: sans-serif;
 }
 
 body {
@@ -38,7 +39,7 @@ p {
     top: 0%;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo-wrap {
@@ -49,8 +50,8 @@ p {
 }
 
 .logo {
-    font-size: 2em;
     text-decoration: none;
+    font-size: 2em;
     color: white;
 }
 
@@ -81,6 +82,7 @@ p {
     width: 100%;
     height: 100%;
     top: 9%;
+    z-index: 100;
 }
 
 .nav-bar a {
@@ -92,6 +94,11 @@ p {
 }
 .nav-bar a:hover {
     background: #4d6a2f;
+}
+
+h3  {
+    border-bottom: 1px solid black;
+    width: 60%;
 }
 
 /* //////////////Home_Section////////////// */
@@ -123,14 +130,46 @@ h1 {
 /* //////////////Services////////////// */
 
 .services-content-container {
-    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-content-container img {
+    margin: 0 auto;
 }
 
 .services-content-container h3 {
     margin: .5em auto;
 }
 
+#lawn-care-popup, 
+#small-projects-popup, 
+#house-cleaning-popup {
+    display: none;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.services-popup ul li {
+    padding-top: .5em;
+    color: 597835;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.services-popup ul li::before {
+  content: url(../images/1398911-20.png);
+  padding-right: .3em;
+}
+
+.services-popup ul span {
+    font-size: 15px;
+    padding-left: 2em;
+}
+
 .services-button {
+    display: inline-block;
+    margin: 1em auto;
     color: white;
     font-size: 1em;
     padding: 1em 2em;
@@ -146,7 +185,6 @@ h1 {
 /* //////////////About////////////// */
 
 .about-section {
-    background: lightgoldenrodyellow;
     padding-bottom: 2.5em;
 }
 
@@ -155,14 +193,82 @@ h1 {
     margin: 0 auto;
 }
 
+.about-header-sentence {
+    width: 70%;
+    margin: .5em 0 .2em 0;
+}
+
 /* //////////////Photos////////////// */
 
 .photos-section {
-    background: lightgreen;
+    background:#7BA94C;
 }
 
 .photos-container {
-    padding-bottom: 2.5em;
+    position: relative;
+    z-index: 1;
+}
+
+.content-image {
+    display: inline-block;
+    box-shadow: 0 0 10px black;
+}
+
+.pseudo-arrow-left{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+
+.pseudo-arrow-right{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+}
+
+.photos-trail {
+    padding: 1em 0;
+}
+
+.image-light {
+    background: lightgrey;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.image-light:hover {
+    background: grey;
+}
+
+.active {
+    background: #333;
+}
+
+.active:hover {
+    background: #333;
+}
+
+.photos-view-more {
+    text-decoration: none;
+    display: inline-block;
+    background: white;
+    padding: 1.2em 2em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    color: #7BA94C;
+}
+
+.photos-view-more:hover {
+    background: #f2f2f2;
+    box-shadow: 0 0 4px grey;
 }
 
 /* //////////////Contact////////////// */
@@ -178,7 +284,8 @@ h1 {
 
 input {
     width: 100%;
-    padding: 1em 0;
+    padding: .5em 0 .5em .5em;
+    font-size: 16px;
 }
 
 textarea {

@@ -41,47 +41,61 @@
             <div class="container">
                 <h2>Services</h2>
                 <div class="services-content-container">
-                    <img src="http://via.placeholder.com/300x250" alt="Lawn Care picture">
                     <h3>Lawn Care</h3>
-                    <div class="lawn-care-popup">
-                    <img src="http://via.placeholder.com/300x250" alt="Lawn Care picture">
+                    <img src="http://via.placeholder.com/300x250" alt="Lawn Care">
+                    <div id="lawn-care-popup" class="services-popup">
                         <ul>
-                            <li>Filler $10-$20</li>
-                            <li>Filler $30-$40</li>
-                            <li>Filler $50-$60</li>
+                            <li>MOWING</li>
+                            <span>$30/standard size yard</span>
+                            <li>MULCHING</li>
+                            <span>$30/pickup + $2/per bag $28/yard</span>
+                            <li>TRIMMING</li>
+                            <span>Bushes Price Vares</span>
+                            <li>PLANTING FLOWERS</li>
+                            <span>$15/hour</span>
+                            <li>STICK REMOVAL</li>
+                            <span>$15/hour + $25 to haul</span>
+                            <li>WEEDING</li>
+                            <span>$15/hour</span>
+                            <li>EDGING</li>
+                            <span>$20/Driveway $40-$50/Yard</span>
+                            <li>HAULING DEBREE</li>
+                            <span>$40-$50/load</span>
                             
                         </ul>
                     </div>
-                    <button class="services-button">Learn more</button>
+                    <button onclick="hideShowLawnCare()" class="services-button">Learn more</button>
                 </div>
                 <div class="services-content-container">
-                    <img src="http://via.placeholder.com/300x250" alt="Small projects">
-                    <h3>Small Projects</h3>
-                    <div class="lawn-care-popup">
-                            <img src="http://via.placeholder.com/300x250" alt="Lawn Care picture">
-                                <ul>
-                                    <li>Filler $10-$20</li>
-                                    <li>Filler $30-$40</li>
-                                    <li>Filler $50-$60</li>
-                                    
-                                </ul>
-                            </div>
-                    <button class="services-button">Learn more</button>
-                </div>
-                <div class="services-content-container">
-                    <img src="http://via.placeholder.com/300x250" alt="Cleaning inside of house">
                     <h3>House Cleaning</h3>
-                    <div class="lawn-care-popup">
-                            <img src="http://via.placeholder.com/300x250" alt="Lawn Care picture">
-                                <ul>
-                                    <li>Filler $10-$20</li>
-                                    <li>Filler $30-$40</li>
-                                    <li>Filler $50-$60</li>
-                                    
-                                </ul>
-                            </div>
-                    <button class="services-button">Learn more</button>
+                    <img src="http://via.placeholder.com/300x250" alt="Cleaning house">
+                    <div id="house-cleaning-popup" class="services-popup">
+                        <ul>
+                            <li>CLEANING WINDOWS</li>
+                            <span>$3/per window $5-10/large window</span>
+                            <li>PRESSURE WASHING</li>
+                            <span>$100/standard size house</span>
+                            <li>CLEANING GUTTERS</li>
+                            <span>$40/standard size house</span>
+                        </ul>
+                    </div>
+                    <button onclick="hideShowHouseCleaning()" class="services-button">Learn more</button>
                 </div>
+            </div>
+            <div class="services-content-container">
+                <h3>Small Projects</h3>
+                <img src="http://via.placeholder.com/300x250" alt="Working on Project">
+                <div id="small-projects-popup" class="services-popup">
+                    <ul>
+                        <li>SANDING</li>
+                        <span>$15/hour</span>
+                        <li>FURNITURE MOVING</li>
+                        <span>Prices may vary</span>
+                        <li>MOVING GROCERIES</li>
+                        <span>$15/hour</span>
+                    </ul>
+                </div>
+                <button onclick="hideShowSmallProjects()" class="services-button">Learn more</button>
             </div>
         </section>
         <a class="nav-anchor" name="about-section"></a>
@@ -89,7 +103,7 @@
             <div class="container">
                 <h2 class="text-center">About</h2>
                 <img src="images/business_picture_isaac.jpg" alt="Man in a suit">
-                <h3>How I got here...</h3>
+                <h3 class="about-header-sentence">How I got here...</h3>
                 <p>My name is Isaac Fenwick and I am a Freshman at Bluffton University. 
                     In May of 2018, I decided to start Fenwick’s Yard Services & More for 
                     two reasons. Number one, I love to help and interact with new people, 
@@ -105,11 +119,22 @@
 
         <a class="nav-anchor" name="photos-section"></a>
         <section class="photos-section text-center">
-            <div class="container">
+            <div>
             <h2>Photos</h2>
                 <div class="photos-container">
-                <img src="http://via.placeholder.com/280" alt="Man in a suit">
+                    <img class="pseudo-arrow-left" onclick="plusSlide(-1)" src="images/arrow-left64.png" alt="arrow left">
+                    <img id="content-image" class="content-image" src="http://via.placeholder.com/280" alt="photos on lawn service">
+                    <img id="content-image" class="content-image" src="http://via.placeholder.com/270" alt="photos on lawn service">
+                    <img id="content-image" class="content-image" src="http://via.placeholder.com/260" alt="photos on lawn service">
+
+                    <img class="pseudo-arrow-right" onclick="plusSlide(+1)" src="images/arrow-right64.png" alt="arrow right">
                 </div>
+                <div class="photos-trail">
+                    <i class="image-light" onclick="slideCurrent(1)"></i>
+                    <i class="image-light" onclick="slideCurrent(2)"></i>
+                    <i class="image-light" onclick="slideCurrent(3)"></i>
+                </div>
+                <a class="photos-view-more" href="#">View More</a>
             </div>
         </section>
 
