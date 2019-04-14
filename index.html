@@ -126,15 +126,20 @@
                     <img id="content-image" class="content-image" src="http://via.placeholder.com/280" alt="photos on lawn service">
                     <img id="content-image" class="content-image" src="http://via.placeholder.com/270" alt="photos on lawn service">
                     <img id="content-image" class="content-image" src="http://via.placeholder.com/260" alt="photos on lawn service">
-
                     <img class="pseudo-arrow-right" onclick="plusSlide(+1)" src="images/arrow-right64.png" alt="arrow right">
                 </div>
+
+                <!-- <div class="my-modal">
+                    <span class="close-button"></span>
+                    <img class="modal-content" id="img01">
+                </div> -->
+
                 <div class="photos-trail">
                     <i class="image-light" onclick="slideCurrent(1)"></i>
                     <i class="image-light" onclick="slideCurrent(2)"></i>
                     <i class="image-light" onclick="slideCurrent(3)"></i>
                 </div>
-                <a class="photos-view-more" href="#">View More</a>
+                <a class="photos-view-more" href="photos.html">View More</a>
             </div>
         </section>
 
@@ -144,19 +149,23 @@
                 <h2 class="text-center">Contact Us</h2>
                 <form action="index.html" method="post">
                     <div class="contact-info-container">
-                        <label for="fullName">Name:</label>
-                            <input type="text" name="name">
+                        <label for="fullName">Name (Required)</label>
+                            <input class="input-content" type="text" name="name">
                     </div>
                     <div class="contact-info-container">
-                        <label for="email">Email:</label>
-                            <input type="email" name="email">
+                        <label for="email">Email (Required)</label>
+                            <input class="input-content" type="email" name="email">
                     </div>
                     <div class="contact-info-container">
-                        <label for="number">Phone:</label>
-                                <input type="phone" name="phone">
+                        <label for="number">Phone (Required)</label>
+                            <input class="input-content" type="phone" name="phone">
                     </div>
                     <div class="contact-info-container">
-                    <label for="subject">Subject:</label>
+                        <label for="address">Address</label>
+                            <input class="input-content" type="text" name="address">
+                        </div>
+                    <div class="contact-info-container">
+                    <label for="subject">Subject</label>
                         <select name="" id="">
                             <option value="?"></option>
                             <option value="lawn-care">Lawn Care</option>
@@ -166,23 +175,19 @@
                         </select>
                     </div>
                     <div class="contact-info-container">
-                        <label for="users-message">Your Message:</label>
+                        <label for="users-message">Your Message</label>
                             <textarea name="users-message" id="" cols="30" rows="10"></textarea>
                     </div>
-                    <button>Submit</button>
+                    <input type="submit" value="Submit">
                 </form>
             </div>
         </section>
     </main>
     
-    <footer>
-        <ul>
-            <li>Copyright © 2019</li>
-            <li>
-                <p>Castalia, OH 44824</p>
-            </li>
-        </ul>
+    <footer class="text-center">
+        <a class="website-creater" target="_blank" href="https://jakefen.github.io/">Website Designed by Jacob Fenwick</a>
+        <p class="copyright">Copyright ©2019 Fenwick's Services - Castalia, OH 44824</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

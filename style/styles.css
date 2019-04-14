@@ -8,6 +8,10 @@ body {
     padding-top: 69px;
 }
 
+.photos-body {
+    padding-top: 69px;
+}
+
 .text-center {
     text-align: center;
 }
@@ -212,6 +216,7 @@ h1 {
 .content-image {
     display: inline-block;
     box-shadow: 0 0 10px black;
+    cursor: pointer;
 }
 
 .pseudo-arrow-left{
@@ -271,23 +276,116 @@ h1 {
     box-shadow: 0 0 4px grey;
 }
 
+/* //////////////IMAGE MODEL////////////// */
+
+.my-modal {
+    display: none;
+}
+
 /* //////////////Contact////////////// */
 
 .contact-section {
-    margin: 0 auto;
+    margin: 0 auto 2em;
 }
 
 .contact-info-container {
     width: 95%;
-    margin: 0 auto;
+    margin: 1em auto;
 }
 
-input {
+label {
+    display: block;
+    color: #62781A;
+    font-size: 1.2em;
+    margin-bottom: .2em;
+}
+
+.input-content, textarea, select {
     width: 100%;
     padding: .5em 0 .5em .5em;
     font-size: 16px;
 }
 
-textarea {
-    width: 100%;
+input[type=submit] {
+    font-size: 16px;
+    background: #7BA94C;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 1.2em 2.4em;
+}
+
+input[type=submit]:hover {
+    background: #597b37;
+}
+
+/* //////////////FOOTER////////////// */
+
+footer {
+    padding: 1em;
+    border-top: 1px solid lightgrey;
+    background: #fafafa;
+}
+
+.website-creater {
+    display: block;
+    margin-bottom: .5em;
+    color: #62781A;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.copyright {
+    color: #62781A;
+    font-size: 12px;
+}
+
+/* //////////////PHOTOS HEADER-BAR////////////// */
+
+.photos-header-bar {
+    background: green;
+    padding: 3em 0;
+    padding-left: 1em;
+    font-size: 2em;
+}
+
+.photos-header-container {
+    position: relative;
+}
+
+.photos-header-over-bar{
+    margin-top: .2em;
+    position: absolute;
+    background: black;
+    height: 2px;
+    width: 30px;
+    top: -15px;
+    left: -12px;
+}
+
+.photos-header-under-bar {
+    margin-top: .2em;
+    position: absolute;
+    background: black;
+    height: 2px;
+    width: 30px;
+    left: 130px;
+}
+
+.photos-album-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos-in-album {
+    flex-direction: column;
+    padding: .7em;
+}
+
+.photos-in-album img {
+    cursor: pointer;
+    box-shadow: 0 0 5px lightgrey;
 }
