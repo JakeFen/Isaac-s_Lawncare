@@ -9,23 +9,25 @@
 </head>
 <body class="photos-body">
     <header class="text-center">
-        <div class="header-bar">
-            <div class="logo-wrap">
-                <a class="logo" href="#">Isaac Fenwick</a>
+        <div class="nav-logo-wrap">
+            <div class="header-bar">
+                <div class="logo-wrap">
+                    <a class="logo" href="#">Isaac Fenwick</a>
+                </div>
+                <div onclick="hideShowNav()" class="burger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
             </div>
-            <div onclick="hideShowNav()" class="burger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
+            <nav id="nav" class="nav-bar">
+                <a href="index.html#home-section" onclick="hideShowNav()">Home</a>
+                <a href="index.html#services-section" onclick="hideShowNav()">Services</a>
+                <a href="index.html#about-section" onclick="hideShowNav()">About</a>
+                <a href="index.html#photos-section" onclick="hideShowNav()">Photos</a>
+                <a href="index.html#contact-section" onclick="hideShowNav()">Contact</a>
+            </nav>
         </div>
-        <nav id="nav" class="nav-bar">
-                <a href="index.html#home" onclick="hideShowNav()">HOME</a>
-                <a href="index.html#services-section" onclick="hideShowNav()">SERVICES</a>
-                <a href="index.html#about-section" onclick="hideShowNav()">ABOUT</a>
-                <a href="index.html#photos-section" onclick="hideShowNav()">PHOTOS</a>
-                <a href="index.html#contact-section" onclick="hideShowNav()">CONTACT</a>
-        </nav>
     </header>
 
     <main>
