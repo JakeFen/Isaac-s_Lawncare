@@ -9,26 +9,28 @@
 </head>
 <body>
     <header class="text-center">
-        <div class="header-bar">
-            <div class="logo-wrap">
-                <a class="logo" href="#">Isaac Fenwick</a>
+        <div class="nav-logo-wrap">
+            <div class="header-bar">
+                <div class="logo-wrap">
+                    <a class="logo" href="#">Isaac Fenwick</a>
+                </div>
+                <div onclick="hideShowNav()" class="burger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
             </div>
-            <div onclick="hideShowNav()" class="burger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
-        </div>
-        <nav id="nav" class="nav-bar">
-                <a href="#home-section" onclick="hideShowNav()">HOME</a>
-                <a href="#services-section" onclick="hideShowNav()">SERVICES</a>
-                <a href="#about-section" onclick="hideShowNav()">ABOUT</a>
-                <a href="#photos-section" onclick="hideShowNav()">PHOTOS</a>
-                <a href="#contact-section" onclick="hideShowNav()">CONTACT</a>
+            <nav id="nav" class="nav-bar">
+                <a href="#home-section" onclick="hideShowNav()">Home</a>
+                <a href="#services-section" onclick="hideShowNav()">Services</a>
+                <a href="#about-section" onclick="hideShowNav()">About</a>
+                <a href="#photos-section" onclick="hideShowNav()">Photos</a>
+                <a href="#contact-section" onclick="hideShowNav()">Contact</a>
             </nav>
+        </div>
         <a class="nav-anchor" name="home-section"></a>
         <section class="home-section">
-            <div class="container">
+            <div class="home-section-content container">
                 <h1> Fenwick’s Services</h1>
                 <p> Striving to make a beautiful community one house at a time!</p>
             </div>
@@ -40,80 +42,91 @@
         <section class="services-section text-center">
             <div class="container">
                 <h2>Services</h2>
-                <div class="services-content-container">
-                    <h3>Lawn Care</h3>
-                    <img src="http://via.placeholder.com/300x250" alt="Lawn Care">
-                    <div id="lawn-care-popup" class="services-popup">
-                        <ul>
-                            <li>MOWING</li>
-                            <span>$30/standard size yard</span>
-                            <li>MULCHING</li>
-                            <span>$30/pickup + $2/per bag $28/yard</span>
-                            <li>TRIMMING</li>
-                            <span>Bushes Price Vares</span>
-                            <li>PLANTING FLOWERS</li>
-                            <span>$15/hour</span>
-                            <li>STICK REMOVAL</li>
-                            <span>$15/hour + $25 to haul</span>
-                            <li>WEEDING</li>
-                            <span>$15/hour</span>
-                            <li>EDGING</li>
-                            <span>$20/Driveway $40-$50/Yard</span>
-                            <li>HAULING DEBREE</li>
-                            <span>$40-$50/load</span>
-                            
-                        </ul>
+                <div class="services-wrap">
+                    <div class="services-content-container">
+                        <h3>House Cleaning</h3>
+                        <img src="http://via.placeholder.com/300x250" alt="Cleaning house">
+                        <div id="house-cleaning-popup" class="services-popup">
+                            <ul>
+                                <li>CLEANING WINDOWS</li>
+                                <span>$3/per window $5-10/large window</span>
+                                <li>PRESSURE WASHING</li>
+                                <span>$100/standard size house</span>
+                                <li>CLEANING GUTTERS</li>
+                                <span>$40/standard size house</span>
+                            </ul>
+                        </div>
+                        <button onclick="hideShowHouseCleaning()" id="services-button1" class="services-button">Learn more</button>
                     </div>
-                    <button onclick="hideShowLawnCare()" class="services-button">Learn more</button>
-                </div>
-                <div class="services-content-container">
-                    <h3>House Cleaning</h3>
-                    <img src="http://via.placeholder.com/300x250" alt="Cleaning house">
-                    <div id="house-cleaning-popup" class="services-popup">
-                        <ul>
-                            <li>CLEANING WINDOWS</li>
-                            <span>$3/per window $5-10/large window</span>
-                            <li>PRESSURE WASHING</li>
-                            <span>$100/standard size house</span>
-                            <li>CLEANING GUTTERS</li>
-                            <span>$40/standard size house</span>
-                        </ul>
+                    <div class="services-content-container">
+                        <h3>Lawn Care</h3>
+                        <img src="http://via.placeholder.com/300x250" alt="Lawn Care">
+                        <div id="lawn-care-popup" class="services-popup">
+                            <ul>
+                                <li>MOWING</li>
+                                <span>$30/standard size yard</span>
+                                <li>MULCHING</li>
+                                <span>$30/pickup + $2/per bag $28/yard</span>
+                                <li>TRIMMING</li>
+                                <span>Bushes Price Vares</span>
+                                <li>PLANTING FLOWERS</li>
+                                <span>$15/hour</span>
+                                <li>STICK REMOVAL</li>
+                                <span>$15/hour + $25 to haul</span>
+                                <li>WEEDING</li>
+                                <span>$15/hour</span>
+                                <li>EDGING</li>
+                                <span>$20/Driveway $40-$50/Yard</span>
+                                <li>HAULING DEBREE</li>
+                                <span>$40-$50/load</span>
+                                
+                            </ul>
+                        </div>
+                        <button onclick="hideShowLawnCare()" id="services-button2" class="services-button">Learn more</button>
                     </div>
-                    <button onclick="hideShowHouseCleaning()" class="services-button">Learn more</button>
+                    <div class="services-content-container">
+                        <h3>Small Projects</h3>
+                        <img src="http://via.placeholder.com/300x250" alt="Working on Project">
+                        <div id="small-projects-popup" class="services-popup">
+                            <ul>
+                                <li>SANDING</li>
+                                <span>$15/hour</span>
+                                <li>FURNITURE MOVING</li>
+                                <span>Prices may vary</span>
+                                <li>MOVING GROCERIES</li>
+                                <span>$15/hour</span>
+                            </ul>
+                        </div>
+                        <button onclick="hideShowSmallProjects()" id="services-button3" class="services-button">Learn more</button>
+                    </div>
                 </div>
-            </div>
-            <div class="services-content-container">
-                <h3>Small Projects</h3>
-                <img src="http://via.placeholder.com/300x250" alt="Working on Project">
-                <div id="small-projects-popup" class="services-popup">
-                    <ul>
-                        <li>SANDING</li>
-                        <span>$15/hour</span>
-                        <li>FURNITURE MOVING</li>
-                        <span>Prices may vary</span>
-                        <li>MOVING GROCERIES</li>
-                        <span>$15/hour</span>
-                    </ul>
-                </div>
-                <button onclick="hideShowSmallProjects()" class="services-button">Learn more</button>
             </div>
         </section>
+
+        <section class="second-background text-center">
+            <p>We will make the best things happen for you!</p>
+        </section>
+
         <a class="nav-anchor" name="about-section"></a>
         <section class="about-section">
             <div class="container">
                 <h2 class="text-center">About</h2>
-                <img src="images/business_picture_isaac.jpg" alt="Man in a suit">
-                <h3 class="about-header-sentence">How I got here...</h3>
-                <p>My name is Isaac Fenwick and I am a Freshman at Bluffton University. 
-                    In May of 2018, I decided to start Fenwick’s Yard Services & More for 
-                    two reasons. Number one, I love to help and interact with new people, 
-                    especially those in my community. Number two, I am going to college for 
-                    Business Administration and Accounting so I figured learning the ins and 
-                    outs of my own business would benefit me dramatically, and the money I make 
-                    in the process will help pay my college expenses. If there are any jobs from
-                    cleaning gutters to helping put up Christmas lights, do not be afraid to get 
-                    into contact with me. I look forward to working with you!
-                </p>
+                <div class="image-with-content">
+                    <img src="images/business_picture.jpg" alt="Business picture">
+                    <div class="about-content">
+                        <h3 class="about-header-sentence">How I got here...</h3>
+                        <p>My name is Isaac Fenwick and I am a Freshman at Bluffton University. 
+                            In May of 2018, I decided to start Fenwick’s Yard Services & More for 
+                            two reasons. Number one, I love to help and interact with new people, 
+                            especially those in my community. Number two, I am going to college for 
+                            Business Administration and Accounting so I figured learning the ins and 
+                            outs of my own business would benefit me dramatically, and the money I make 
+                            in the process will help pay my college expenses. If there are any jobs from
+                            cleaning gutters to helping put up Christmas lights, do not be afraid to get 
+                            into contact with me. I look forward to working with you!
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -122,11 +135,11 @@
             <div>
             <h2>Photos</h2>
                 <div class="photos-container">
-                    <img class="pseudo-arrow-left" onclick="plusSlide(-1)" src="images/arrow-left64.png" alt="arrow left">
-                    <img id="content-image" class="content-image" src="http://via.placeholder.com/280" alt="photos on lawn service">
-                    <img id="content-image" class="content-image" src="http://via.placeholder.com/270" alt="photos on lawn service">
-                    <img id="content-image" class="content-image" src="http://via.placeholder.com/260" alt="photos on lawn service">
-                    <img class="pseudo-arrow-right" onclick="plusSlide(+1)" src="images/arrow-right64.png" alt="arrow right">
+                    <img class="pseudo-arrow-left" onclick="plusSlide(-1)" src="images/arrow-left-64.png" alt="arrow left">
+                    <img id="content-image" class="content-image" src="images/white_house_lawn.jpg" alt="photo of a white house">
+                    <img id="content-image" class="content-image" src="images/mulch_tree.jpg" alt="photo of planted tree with mulch">
+                    <img id="content-image" class="content-image" src="images/barn.jpg" alt="photos of red barn">
+                    <img class="pseudo-arrow-right" onclick="plusSlide(+1)" src="images/arrow-right-64.png" alt="arrow right">
                 </div>
 
                 <!-- <div class="my-modal">

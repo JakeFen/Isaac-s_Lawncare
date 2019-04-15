@@ -13,30 +13,41 @@ function hideShowNav() {
     }
 }
 
-function hideShowLawnCare() {
-    if (lawnCarePopup.style.display == 'inline-block') {
-        lawnCarePopup.style.display = 'none';
-    }
-    else {
-        lawnCarePopup.style.display = 'inline-block';
-    }
-}
+const serviceButton1 = document.getElementById('services-button1');
+const serviceButton2 = document.getElementById('services-button2');
+const serviceButton3 = document.getElementById('services-button3');
 
 function hideShowHouseCleaning() {
     if (houseCleaningPopup.style.display == 'inline-block') {
         houseCleaningPopup.style.display = 'none';
+        serviceButton1.innerText = "Learn more";
     }
     else {
         houseCleaningPopup.style.display = 'inline-block';
+        serviceButton1.innerText = "Close";
     }
 }
+
+function hideShowLawnCare() {
+    if (lawnCarePopup.style.display == 'inline-block') {
+        lawnCarePopup.style.display = 'none';
+        serviceButton2.innerText = "Learn more";
+    }
+    else {
+        lawnCarePopup.style.display = 'inline-block';
+        serviceButton2.innerText = "Close";
+    }
+}
+
 
 function hideShowSmallProjects() {
     if (smallProjectsPopup.style.display == 'inline-block') {
         smallProjectsPopup.style.display = 'none';
+        serviceButton3.innerText = "Learn more";
     }
     else {
         smallProjectsPopup.style.display = 'inline-block';
+        serviceButton3.innerText = "Close";
     }
 }
 

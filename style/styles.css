@@ -35,17 +35,14 @@ p {
 
 /* //////////////Header////////////// */
 
-.header-bar {
+.nav-logo-wrap {
+    background: #668d3f;
+    width: 100%;
+    padding: 1em 0;
     top: 0%;
     position: fixed;
     width: 100%;
     z-index: 1000;
-}
-
-.logo-wrap {
-    background: #668d3f;
-    width: 100%;
-    padding: 1em;
     border-bottom: 2px solid black;
 }
 
@@ -53,6 +50,10 @@ p {
     text-decoration: none;
     font-size: 2em;
     color: white;
+}
+
+.nav-bar a {
+    text-decoration: none;
 }
 
 .burger {
@@ -73,42 +74,19 @@ p {
     margin: 10px;
 }
 
-.nav-bar {
-    position: fixed;
-    display: none;
-    flex-direction: column;
-    font-size: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    width: 100%;
-    height: 100%;
-    top: 9%;
-    z-index: 100;
-}
-
-.nav-bar a {
-    padding: 1em;
-    border-bottom: 1px solid #4d6a2f;
-    width: 100%;
-    text-decoration: none;
-    color: white;
-}
-.nav-bar a:hover {
-    background: #4d6a2f;
-}
 
 h3  {
     border-bottom: 1px solid black;
-    width: 60%;
 }
 
 /* //////////////Home_Section////////////// */
 
 .home-section {
-    background-image: url(../images/header_background.jpg);
-    padding: 5em 0;
+    background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(../images/header_background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 7em 0;
 }
 
 h1 {
@@ -158,7 +136,7 @@ h1 {
 }
 
 .services-popup ul li::before {
-  content: url(../images/1398911-20.png);
+  content: url(../images/brown_check.png);
   padding-right: .3em;
 }
 
@@ -182,6 +160,12 @@ h1 {
     cursor: pointer;
 }
 
+/* //////////////Second Background////////////// */
+
+.second-background {
+    display: none;
+}
+
 /* //////////////About////////////// */
 
 .about-section {
@@ -190,29 +174,46 @@ h1 {
 
 .about-section img {
     display: block;
-    margin: 0 auto;
+    height: 500px;
 }
 
 .about-header-sentence {
-    width: 70%;
+    width: 260px;
     margin: .5em 0 .2em 0;
+}
+
+.image-with-content {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* //////////////Photos////////////// */
 
 .photos-section {
-    background:#7BA94C;
+    background:linear-gradient( rgba(0,0,0,.7), rgba(0,0,0,.7) ), url(../images/photos_header_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photos-section h2 {
+    color: white;
 }
 
 .photos-container {
     position: relative;
     z-index: 1;
+    width: 438px;
+    margin: 0 auto;
 }
 
 .content-image {
     display: inline-block;
     box-shadow: 0 0 10px black;
-    cursor: pointer;
+    height: 310px;
+    width: 310px;
 }
 
 .pseudo-arrow-left{
@@ -236,7 +237,7 @@ h1 {
 }
 
 .image-light {
-    background: lightgrey;
+    background: #f2f2f2;
     display: inline-block;
     height: 20px;
     width: 20px;
@@ -246,15 +247,16 @@ h1 {
 }
 
 .image-light:hover {
-    background: grey;
+    background: #a6c884;
 }
 
 .active {
-    background: #333;
+    background: #668d3f;
+
 }
 
 .active:hover {
-    background: #333;
+    background: #668d3f;
 }
 
 .photos-view-more {
@@ -326,7 +328,7 @@ footer, .photos-footer {
 }
 
 .website-creater {
-    display: block;
+    display: inline-block;
     margin-bottom: .6em;
     color: #62781A;
     font-size: 18px;
@@ -341,7 +343,10 @@ footer, .photos-footer {
 /* //////////////PHOTOS HEADER-BAR////////////// */
 
 .photos-header-bar {
-    background: green;
+    background:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(../images/photos_header_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 2em 0;
     padding-left: 1em;
     font-size: 3em;
@@ -354,7 +359,7 @@ footer, .photos-footer {
 .photos-header-over-bar{
     margin-top: .2em;
     position: absolute;
-    background: black;
+    background: #678D3F;
     height: 2px;
     width: 30px;
     top: -20px;
@@ -364,7 +369,7 @@ footer, .photos-footer {
 .photos-header-under-bar {
     margin-top: .2em;
     position: absolute;
-    background: black;
+    background: #678D3F;
     height: 2px;
     width: 30px;
     left: 185px;
@@ -383,5 +388,162 @@ footer, .photos-footer {
 
 .photos-in-album img {
     cursor: pointer;
-    box-shadow: 0 0 5px lightgrey;
+    box-shadow: 0 0 10px gray;
+    height: 200px;
+    width: 200px;
+}
+
+/* ///////////MEDIA FEATURES///////////// */
+
+@media only screen and (min-width: 640px) {
+
+.about-content {
+    width: 70%;
+}
+
+.contact-info-container {
+    width: 566px;
+}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+.nav-bar {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 9%;
+    z-index: 100;
+}
+
+.nav-bar a {
+    padding: 1em;
+    border-bottom: 1px solid #4d6a2f;
+    width: 100%;
+    color: white;
+}
+.nav-bar a:hover {
+    background: #4d6a2f;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+.nav-logo-wrap {
+    padding: 1.5em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 1em;
+    font-size: 27px;
+}
+
+.nav-bar {
+    margin-right: .5em;
+    display: flex;
+    font-size: 24px;
+}
+
+.nav-bar a {
+    padding: 0 .5em;
+    color: white;
+}
+
+.nav-bar a:hover {
+    border-bottom: 1px solid white;
+}
+
+.nav-bar :nth-last-child(n+2){
+    border-right: solid white 1px;
+}
+
+.burger {
+    display: none;
+}
+
+.home-section{
+    height: 75%;
+    position: relative;
+}
+
+.home-section-content {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+    padding: 0;
+}
+
+.home-section-content  h1 {
+    font-size: 5em;
+}
+
+.services-section {
+    padding-bottom: 1em;
+}
+
+.services-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services-content-container {
+    padding: 0 1em;
+}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+.home-section {
+    height: 100%;
+}
+
+.second-background {
+    display: block;
+    background: #4d6a2f;
+}
+
+.second-background p {
+    padding: 10em 0;
+}
+
+.about-content {
+    width: 400px;
+    border: 1px solid black;
+    height: 450px;
+    order: -1;
+    padding: 0 1em;
+    margin: 1.5em 1em;
+}
+
+.about-content p {
+    padding-top: .5em;
+}
+
+.image-with-content img {
+    margin: 0 1em;
+}
+
+.content-image {
+    display: block;
+}
+
+}
+
+@media only screen and (min-width: 1300px) {
+
+.services-content-container {
+    padding: 0 3em;
+}
+
 }
