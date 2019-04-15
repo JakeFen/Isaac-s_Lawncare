@@ -9,7 +9,6 @@ function hideShowNav() {
     }
     else {
         nav.style.display = 'flex';
-
     }
 }
 

@@ -410,6 +410,7 @@ footer, .photos-footer {
 @media only screen and (max-width: 767px) {
 
 .nav-bar {
+    text-transform: uppercase;
     position: fixed;
     display: none;
     flex-direction: column;
