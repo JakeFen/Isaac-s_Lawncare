@@ -32,7 +32,7 @@
         <section class="home-section">
             <div class="home-section-content container">
                 <h1> Fenwick’s Services</h1>
-                <p> Striving to make a beautiful community one house at a time!</p>
+                <p class="header-paragraphs"> Striving to make a beautiful community one house at a time!</p>
             </div>
         </section>
     </header>
@@ -104,7 +104,7 @@
         </section>
 
         <section class="second-background text-center">
-            <p>We will make the best things happen for you!</p>
+            <p class="header-paragraphs">We will make the best things happen for you!</p>
         </section>
 
         <a class="nav-anchor" name="about-section"></a>
@@ -136,17 +136,11 @@
             <h2>Photos</h2>
                 <div class="photos-container">
                     <img class="pseudo-arrow-left" onclick="plusSlide(-1)" src="images/arrow-left-64.png" alt="arrow left">
-                    <img id="content-image" class="content-image" src="images/white_house_lawn.jpg" alt="photo of a white house">
-                    <img id="content-image" class="content-image" src="images/mulch_tree.jpg" alt="photo of planted tree with mulch">
-                    <img id="content-image" class="content-image" src="images/barn.jpg" alt="photos of red barn">
+                    <img id="content-image" onclick="onClick(this)" class="content-image" src="images/white_house_lawn.jpg" alt="photo of a white house">
+                    <img id="content-image" onclick="onClick(this)" class="content-image" src="images/mulch_tree.jpg" alt="photo of planted tree with mulch">
+                    <img id="content-image" onclick="onClick(this)" class="content-image" src="images/barn.jpg" alt="photos of red barn">
                     <img class="pseudo-arrow-right" onclick="plusSlide(+1)" src="images/arrow-right-64.png" alt="arrow right">
                 </div>
-
-                <!-- <div class="my-modal">
-                    <span class="close-button"></span>
-                    <img class="modal-content" id="img01">
-                </div> -->
-
                 <div class="photos-trail">
                     <i class="image-light" onclick="slideCurrent(1)"></i>
                     <i class="image-light" onclick="slideCurrent(2)"></i>
@@ -154,13 +148,17 @@
                 </div>
                 <a class="photos-view-more" href="photos.html">View More</a>
             </div>
+            <div id="my-modal" onclick="this.style.display='none'">
+                <span class="close-button"></span>
+                <img class="modal-image" id="img01">
+            </div>
         </section>
 
         <a class="nav-anchor" name="contact-section"></a>
         <section class="contact-section">
             <div class="container">
                 <h2 class="text-center">Contact Us</h2>
-                <form action="index.html" method="post">
+                <form action="inc/contact_form.php" method="post">
                     <div class="contact-info-container">
                         <label for="fullName">Name (Required)</label>
                             <input class="input-content" type="text" name="name">
@@ -176,10 +174,10 @@
                     <div class="contact-info-container">
                         <label for="address">Address</label>
                             <input class="input-content" type="text" name="address">
-                        </div>
+                    </div>
                     <div class="contact-info-container">
                     <label for="subject">Subject</label>
-                        <select name="" id="">
+                        <select name="subject" id="">
                             <option value="?"></option>
                             <option value="lawn-care">Lawn Care</option>
                             <option value="small-projects">Small Projects</option>
@@ -189,9 +187,9 @@
                     </div>
                     <div class="contact-info-container">
                         <label for="users-message">Your Message</label>
-                            <textarea name="users-message" id="" cols="30" rows="10"></textarea>
+                            <textarea name="message" id="" cols="30" rows="10"></textarea>
                     </div>
-                    <input type="submit" value="Submit">
+                    <input type="submit" name="submit" value="submit">
                 </form>
             </div>
         </section>

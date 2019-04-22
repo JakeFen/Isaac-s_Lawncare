@@ -1,3 +1,5 @@
+//////////NAV BAR////////////
+
 const nav = document.getElementById('nav');
 const lawnCarePopup = document.getElementById('lawn-care-popup');
 const smallProjectsPopup = document.getElementById('small-projects-popup');
@@ -11,6 +13,8 @@ function hideShowNav() {
         nav.style.display = 'flex';
     }
 }
+
+///////////Learn More Buttons////////////
 
 const serviceButton1 = document.getElementById('services-button1');
 const serviceButton2 = document.getElementById('services-button2');
@@ -81,3 +85,10 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = 'inline-block';
     imgLight[slideIndex-1].className += ' active';
 }
+
+/////////////Photo Popup/////////////
+
+function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("my-modal").style.display = "block";
+  }

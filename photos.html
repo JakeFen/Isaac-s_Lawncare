@@ -42,22 +42,26 @@
         <section class="photos-album container text-center">
             <div class="photos-album-container">
                     <div class="photos-in-album">
-                        <img src="images/white_house_lawn.jpg" alt="photos of a white house">
+                        <img onclick="onClick(this)" src="images/white_house_lawn.jpg" alt="photos of a white house">
                     </div>
                     <div class="photos-in-album">
-                        <img src="images/mulch_tree.jpg" alt="photos of mulched tree">
+                        <img onclick="onClick(this)" src="images/mulch_tree.jpg" alt="photos of mulched tree">
                     </div>
                     <div class="photos-in-album">
-                        <img src="images/barn.jpg" alt="photos of a barn">
+                        <img onclick="onClick(this)" src="images/barn.jpg" alt="photos of a barn">
                     </div>
                     <div class="photos-in-album">
-                        <img src="images/walkway_plants.jpg" alt="photos of walkway with plants">
+                        <img onclick="onClick(this)" src="images/walkway_plants.jpg" alt="photos of walkway with plants">
                     </div>
                     <div class="photos-in-album">
-                        <img src="images/mulch_tree.jpg" alt="photos of mulched tree">
+                        <img onclick="onClick(this)" src="images/mulch_tree.jpg" alt="photos of mulched tree">
                     </div>
             </div>
         </section>
+            <div id="my-modal" onclick="this.style.display='none'">
+                <span class="close-button"></span>
+                <img class="modal-image" id="img01">
+            </div>
     </main>
 
     <footer class="photos-footer text-center">
