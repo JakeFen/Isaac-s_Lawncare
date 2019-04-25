@@ -313,6 +313,8 @@ input[type=submit]:hover {
     background: #597b37;
 }
 
+/* input:required:invalid {border: 2px solid red;} */
+
 /* //////////////FOOTER////////////// */
 
 footer, .photos-footer {

@@ -1,6 +1,7 @@
 <?php 
 
 if (isset($_POST['submit'])) {
+
     $name = $_POST['name'];
     $mailFrom = $_POST['email'];
     $phone = $_POST['phone'];
@@ -8,8 +9,8 @@ if (isset($_POST['submit'])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $mailTo = "jacobfenwick11@yahoo.com";
-    $headers = "From: ". $mailFrom;
+    $mailTo = "FenwicksServices@yahoo.com";
+    $headers = "From: BuisnessEmails";
     $txt = "Name: ".$name."\n".
     "Email: ".$mailFrom."\n".
     "Phone: ".$phone."\n".

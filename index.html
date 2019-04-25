@@ -161,15 +161,16 @@
                 <form action="inc/contact_form.php" method="post">
                     <div class="contact-info-container">
                         <label for="fullName">Name (Required)</label>
-                            <input class="input-content" type="text" name="name">
+                        <span class="error" name="error"></span>
+                            <input class="input-content" type="text" name="name" required>
                     </div>
                     <div class="contact-info-container">
                         <label for="email">Email (Required)</label>
-                            <input class="input-content" type="email" name="email">
+                            <input class="input-content" type="email" name="email" required>
                     </div>
                     <div class="contact-info-container">
                         <label for="number">Phone (Required)</label>
-                            <input class="input-content" type="phone" name="phone">
+                            <input class="input-content" type="phone" name="phone" required>
                     </div>
                     <div class="contact-info-container">
                         <label for="address">Address</label>
@@ -189,7 +190,7 @@
                         <label for="users-message">Your Message</label>
                             <textarea name="message" id="" cols="30" rows="10"></textarea>
                     </div>
-                    <input type="submit" name="submit" value="submit">
+                    <input id="submit-button" type="submit" name="submit" value="submit">
                 </form>
             </div>
         </section>

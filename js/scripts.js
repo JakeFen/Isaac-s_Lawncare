@@ -91,4 +91,16 @@ function showSlides(n) {
 function onClick(element) {
     document.getElementById("img01").src = element.src;
     document.getElementById("my-modal").style.display = "block";
-  }
+}
+
+var contactButton = document.getElementById('submit-button');
+
+contactButton.addEventListener('click', function(e) {
+    var required = document.querySelectorAll('input[required]');
+    
+    required.forEach(function(element) {
+        if(element.value.trim() == "") {
+            element.style.borderColor = "red";
+        }
+    });
+});
