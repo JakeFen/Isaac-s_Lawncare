@@ -113,6 +113,8 @@ h1 {
 
 .services-content-container img {
     margin: 0 auto;
+    width: 300px;
+    height: 250px;
 }
 
 .services-content-container h3 {
